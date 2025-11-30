@@ -1,0 +1,99 @@
+/* --- General Layout --- */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #343541;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #ececf1;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* --- Chat Container --- */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 1.5rem;
+  scroll-behavior: smooth;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: #565869;
+  border-radius: 4px;
+}
+
+.message {
+  max-width: 75%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  animation: fadeIn 0.2s ease;
+}
+.message.user {
+  align-self: flex-end;
+  background-color: #10a37f;
+  color: white;
+}
+.message.assistant {
+  align-self: flex-start;
+  background-color: #444654;
+  color: #ececf1;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #40414f;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #565869;
+}
+.input-box {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background-color: #343541;
+  border: 1px solid #565869;
+  border-radius: 0.5rem;
+  color: #ececf1;
+  font-size: 1rem;
+  outline: none;
+}
+.input-box:focus {
+  border-color: #10a37f;
+}
+.send-button {
+  background-color: #10a37f;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.send-button:hover {
+  background-color: #13b88f;
+}
+.typing {
+  font-size: 0.9rem;
+  color: #9a9b9f;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
