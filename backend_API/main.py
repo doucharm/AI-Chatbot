@@ -6,7 +6,7 @@ app = FastAPI()
 
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
-LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"
+LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions" #The direction to LM Studio API
 
 @app.get("/")
 def root():

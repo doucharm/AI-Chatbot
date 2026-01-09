@@ -1,8 +1,11 @@
+import ReactMarkdown from 'react-markdown';
+
 function MessageBubble({ role, content }) {
   return (
     <div className={`message-wrapper ${role}`}>
       <div className={`message ${role}`}>
-        {content}
+        {/* ReactMarkdown parses the string and renders HTML */}
+        <ReactMarkdown>{String(content)}</ReactMarkdown>
       </div>
     </div>
   );
