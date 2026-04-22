@@ -18,3 +18,8 @@ Current techology stack
 
 3. LLM : LM Studio running locally with small models
 
+Deployment:
+Performance benchmark
+  locust -f locustfile.py --host=http://localhost:1234  
+Frontend Chainlit deployment
+   chainlit run app.py -w          
