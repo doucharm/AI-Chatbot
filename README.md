@@ -20,6 +20,9 @@ Current techology stack
 
 Deployment:
 Performance benchmark
-  locust -f locustfile.py --host=http://localhost:1234  
+```
+  locust -f locustfile.py --host=http://localhost:1234
+```
 Frontend Chainlit deployment
+```
    chainlit run app.py -w          
