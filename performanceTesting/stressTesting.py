@@ -129,7 +129,7 @@ async def test(batch_number, request_count, context):
         
     print(f"\nSuccess! Metrics saved to {csv_filename}.")
 async def main():  
-    for i in range(1,10):
+    for i in range(1,11):
         await test(batch_number=i, request_count=CONCURRENT_USERS, context=True)
         time.sleep(60)
 
